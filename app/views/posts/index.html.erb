@@ -1,0 +1,11 @@
+<h1>All Posts</h1>
+<% Post.all.each do |post| %>
+  <div>Title:</div>
+  <div>
+    <%=post.title%>
+  </div>
+  <div>Content:</div>
+  <div><%=post.content%></div>
+  <br>
+<% end %>
+<%= link_to "New Post", "posts/new"%>
