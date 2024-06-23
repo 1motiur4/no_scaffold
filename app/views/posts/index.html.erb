@@ -1,11 +1,14 @@
 <h1>All Posts</h1>
-<% Post.all.each do |post| %>
+<% @posts.each do |post| %>
   <div>Title:</div>
   <div>
     <%=post.title%>
   </div>
   <div>Content:</div>
   <div><%=post.content%></div>
+  <%= link_to "Show Post", "/post/#{post.id}" %>
+  <%= link_to "Edit Post", "post/#{post.id}/edit" %>
+  <br>
   <br>
 <% end %>
 <%= link_to "New Post", "posts/new"%>
